@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- PAGE TITLE AND DESCRIPTION -->
+		<title>{{ site.title }}/</title>
+		<meta name="description" content="{{site.description}}">
+
+		<!-- CSS STYLESHEETS -->
+		<link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url}}">
+
+		<!-- CANONICAL -->
+		<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+	</head>
+
+	<body>
+		{{ content }}
+	</body>
+</html>
