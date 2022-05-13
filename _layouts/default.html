@@ -16,7 +16,28 @@
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 	</head>
 
+	<nav>
+		<div class="mx-auto px-10 py-7 flex justify-between items-center">
+			<div class="flex items-baseline" >
+				<img class="h-8" src="/assets/images/logo.svg">
+				<a class="font-bold text-3xl" href="#">limber Tools </a>
+			</div>
+			<ul class="inline-flex">
+				{% assign sections_sorted = site.documents | concat: site.pages | sort: 'order' %}
+				{% for p in sections_sorted %}
+					{% if p.title == page.title %}
+						<li><a class="px-3 font-bold" href="{{p.url}}">{{p.title}}</a></li>
+					{% else %}
+						<li><a class="px-3" href="{{p.url}}">{{p.title}}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div> 
+	</nav>
+
 	<body>
-		{{ content }}
+		<div class="px-10 grow">
+				{{ content }}
+		</div>
 	</body>
 </html>

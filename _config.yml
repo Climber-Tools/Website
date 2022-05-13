@@ -3,5 +3,8 @@ email: tomas@slama.dev
 description: >-
   The Climber Tools website.
 
-url: "climber.tools"
+url: "https://climber.tools"
 baseurl: ""
+
+plugins:
+  - jekyll-postcss

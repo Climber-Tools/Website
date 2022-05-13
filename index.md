@@ -1,7 +1,7 @@
 ---
+title: Home
+order: 0
 layout: default
 ---
-
-# Hello!
 
 This site is currently under construction.
