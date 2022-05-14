@@ -5,3 +5,5 @@ description: >-
 
 url: "https://climber.tools"
 baseurl: ""
+
+permalink: /:title/
