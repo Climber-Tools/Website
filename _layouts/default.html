@@ -10,34 +10,48 @@
 		<meta name="description" content="{{site.description}}">
 
 		<!-- CSS STYLESHEETS -->
+		<script src="https://cdn.tailwindcss.com/"></script>
+
 		<link rel="stylesheet" href="/assets/css/main.css">
 
 		<!-- CANONICAL -->
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 	</head>
 
-	<nav>
-		<div class="mx-auto px-10 py-7 flex justify-between items-center">
-			<div class="flex items-baseline" >
-				<img class="h-8" src="/assets/images/logo.svg">
-				<a class="font-bold text-3xl" href="#">limber Tools </a>
-			</div>
-			<ul class="inline-flex">
-				{% assign sections_sorted = site.documents | concat: site.pages | sort: 'order' %}
-				{% for p in sections_sorted %}
-					{% if p.title == page.title %}
-						<li><a class="px-3 font-bold" href="{{p.url}}">{{p.title}}</a></li>
-					{% else %}
-						<li><a class="px-3" href="{{p.url}}">{{p.title}}</a></li>
-					{% endif %}
-				{% endfor %}
-			</ul>
-		</div> 
-	</nav>
+	<div class="flex flex-col h-screen mx-auto max-w-5xl">
+		<nav>
+			<div class="px-10 py-7 flex justify-between items-center">
+				<div class="flex items-baseline drop-shadow-md">
+					<img class="h-8" src="/assets/images/logo.svg">
+					<a class="font-bold text-3xl" href="/">limber Tools </a>
+				</div>
+				<ul class="inline-flex">
+					{% assign sections_sorted = site.documents | concat: site.pages | sort: 'order' %}
+					{% for p in sections_sorted %}
+						{% if p.title == page.title %}
+							<li><a class="px-3 text-xl font-bold drop-shadow-md" href="{{p.url}}">{{p.title}}</a></li>
+						{% else %}
+							<li><a class="px-3 text-xl drop-shadow-md" href="{{p.url}}">{{p.title}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div> 
+		</nav>
 
-	<body>
-		<div class="px-10 grow">
-				{{ content }}
-		</div>
-	</body>
+		<body>
+			<main class="flex-grow px-10">
+					{{ content }}
+			</main>
+		</body>
+
+		<footer class="flex flex-col px-10 py-7 space-y-1">
+			<div class="space-x-5 m-auto">
+				<a href="https://github.com/Climber-Tools/" class="underline decoration-wavy decoration-sky-600">GitHub</a>
+				<a href="https://github.com/Climber-Tools/Website" class="underline decoration-wavy decoration-sky-600">Website Code</a>
+			</div>
+			<div class="m-auto">
+				<p>Maintained by Tomáš Sláma</p>
+			</div>
+		</footer>
+	</div>
 </html>

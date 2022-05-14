@@ -5,6 +5,3 @@ description: >-
 
 url: "https://climber.tools"
 baseurl: ""
-
-plugins:
-  - jekyll-postcss
