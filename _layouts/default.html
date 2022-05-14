@@ -6,12 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- PAGE TITLE AND DESCRIPTION -->
-		<title>{{ site.title }}/</title>
+		{% if page.title %}
+			<title>{{site.title}} – {{page.title}}</title>
+		{% else %}
+			<title>{{site.title}}</title>
+		{% endif %}
 		<meta name="description" content="{{site.description}}">
 
-		<!-- CSS STYLESHEETS -->
+		<!-- STYLESHEETS -->
 		<script src="https://cdn.tailwindcss.com/"></script>
-
 		<link rel="stylesheet" href="/assets/css/main.css">
 
 		<!-- CANONICAL -->
