@@ -5,8 +5,8 @@ layout: default
 ---
 
 <!-- REFACTOR THIS TO FUNCTIONS! -->
-<div class="max-w-3xl mx-auto">
-	<div class="flex-1 m-5 p-3 space-y-5">
+<div class="mx-auto space-y-10">
+	<div class="flex-1 space-y-5">
 		<div class="grid place-items-center space-y-2">
 			<img class="h-12 drop-shadow-md" src="/assets/images/clis.svg">
 			<div class="text-xl">The <strong>cli</strong>mber's <strong>s</strong>canner.</div>
@@ -18,7 +18,7 @@ layout: default
 			Available on <a class="underline decoration-wavy decoration-sky-600" href="https://github.com/Climber-Apps/Clis">GitHub</a>.
 		</div>
 	</div>
-	<div class="flex-1 m-5 p-3 space-y-5">
+	<div class="flex-1 space-y-5">
 		<div class="grid place-items-center space-y-2">
 			<img class="h-12 drop-shadow-md" src="/assets/images/cled.svg">
 			<div class="text-xl">The <strong>cl</strong>imber's <strong>ed</strong>itor.</div>
