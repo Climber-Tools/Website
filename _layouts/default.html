@@ -31,14 +31,14 @@
 					<img class="h-8" src="/assets/images/logo.svg">
 					<a class="text-3xl" href="/"><strong>limber Tools</strong> </a>
 				</div>
-				<ul class="grid sm:grid-cols-2 sm:gap-3 gap-0 justify-items-center">
+				<ul class="grid sm:grid-cols-2 justify-items-center">
 					{% assign sections_sorted = site.documents | concat: site.pages | sort: 'order' %}
 					{% for p in sections_sorted %}
 						{% if p.title %}
 							{% if p.title == page.title %}
-								<li><a class="text-xl drop-shadow-md" href="{{p.url | replace:'.html',''}}"><strong>{{p.title}}</strong></a></li>
+								<li><a class="text-xl pl-5 drop-shadow-md" href="{{p.url | replace:'.html',''}}"><strong>{{p.title}}</strong></a></li>
 							{% else %}
-								<li><a class="text-xl drop-shadow-md" href="{{p.url | replace:'.html',''}}">{{p.title}}</a></li>
+								<li><a class="text-xl pl-5 drop-shadow-md" href="{{p.url | replace:'.html',''}}">{{p.title}}</a></li>
 							{% endif %}
 						{% endif %}
 					{% endfor %}
