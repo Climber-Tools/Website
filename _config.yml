@@ -6,4 +6,6 @@ description: >-
 url: "https://climber.tools"
 baseurl: ""
 
+exclude: ["CNAME", "package*.json", "*.js"]
+
 permalink: /:title/
