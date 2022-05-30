@@ -6,6 +6,12 @@ description: >-
 url: "https://climber.tools"
 baseurl: ""
 
-exclude: ["CNAME", "package*.json", "*.js"]
+exclude: ["package*.json", "*.js"]
 
 permalink: /:title/
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
