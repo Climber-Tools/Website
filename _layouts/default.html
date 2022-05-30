@@ -26,10 +26,10 @@
 	<div class="flex flex-col h-screen mx-auto max-w-3xl">
 		<nav>
 			<div class="px-10 py-7 flex justify-between items-center">
-				<div class="flex items-baseline drop-shadow-md">
-					<img class="h-8" src="/assets/images/logo.svg">
-					<a class="text-3xl" href="/"><strong>limber Tools</strong> </a>
-				</div>
+					<a class="text-3xl flex items-baseline drop-shadow-md" href="/">
+						<img class="h-8" src="/assets/images/logo.svg">
+						<strong>limber Tools</strong>
+					</a>
 				<ul class="grid sm:grid-cols-2 justify-items-center">
 					{% assign sections_sorted = site.documents | concat: site.pages | sort: 'order' %}
 					{% for p in sections_sorted %}
@@ -53,8 +53,8 @@
 
 		<footer class="flex flex-col px-10 py-7 space-y-1">
 			<div class="space-x-5 m-auto">
-				<a href="https://github.com/Climber-Tools/" class="underline decoration-wavy decoration-sky-600">GitHub</a>
-				<a href="https://github.com/Climber-Tools/Website" class="underline decoration-wavy decoration-sky-600">Website Code</a>
+				<a href="https://github.com/Climber-Tools/">GitHub</a>
+				<a href="https://github.com/Climber-Tools/Website">Website Code</a>
 			</div>
 			<div class="m-auto text-xs">
 				<p>Maintained by Tomáš Sláma</p>

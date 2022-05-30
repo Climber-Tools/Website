@@ -11,3 +11,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+main,footer {
+	a {
+	   @apply underline decoration-wavy decoration-sky-600
+	}
+}
